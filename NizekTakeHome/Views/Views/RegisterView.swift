@@ -29,7 +29,6 @@ class RegisterView: UIView {
   }()
 
   lazy var registerButton: CustomButton = {
-//    let button = CustomButton(title: "Register", subtitle: nil, icon: nil, titleFontSize: 17, subtitleFontSize: nil, imageOptions: .none, action: handleRegister)
     let button = CustomButton(title: "Register", subtitle: nil, icon: "ss", titleFontSize: 17, subtitleFontSize: nil, imageOptions: .assetImage, action: handleRegister)
     button.translatesAutoresizingMaskIntoConstraints = false
     return button
@@ -66,11 +65,10 @@ class RegisterView: UIView {
       passwordTextField.topAnchor.constraint(equalTo: userNameTextField.bottomAnchor, constant: 18),
       passwordTextField.heightAnchor.constraint(equalToConstant: 44.0),
 
-//      registerButton.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor),
-//      registerButton.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor),
-      registerButton.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor),
+      registerButton.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor, constant: -12),
+      registerButton.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor, constant: 12),
+      registerButton.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor, constant: -12),
       registerButton.heightAnchor.constraint(equalToConstant: 44),
-      registerButton.widthAnchor.constraint(equalToConstant: 200),
     ])
   }
 

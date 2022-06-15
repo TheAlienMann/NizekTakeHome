@@ -8,25 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		49D623D3285A132D00B43867 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D623D2285A132D00B43867 /* AppDelegate.swift */; };
-		49D623D5285A132D00B43867 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D623D4285A132D00B43867 /* SceneDelegate.swift */; };
-		49D623D7285A132D00B43867 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D623D6285A132D00B43867 /* ViewController.swift */; };
-		49D623DA285A132D00B43867 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49D623D8285A132D00B43867 /* Main.storyboard */; };
+		49D623D7285A132D00B43867 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D623D6285A132D00B43867 /* MainViewController.swift */; };
 		49D623DC285A133000B43867 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49D623DB285A133000B43867 /* Assets.xcassets */; };
 		49D623DF285A133000B43867 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49D623DD285A133000B43867 /* LaunchScreen.storyboard */; };
 		49D623EA285A133100B43867 /* NizekTakeHomeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D623E9285A133100B43867 /* NizekTakeHomeTests.swift */; };
-		49D623F4285A133100B43867 /* NizekTakeHomeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D623F3285A133100B43867 /* NizekTakeHomeUITests.swift */; };
-		49D623F6285A133100B43867 /* NizekTakeHomeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D623F5285A133100B43867 /* NizekTakeHomeUITestsLaunchTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		49D623E6285A133100B43867 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 49D623C7285A132D00B43867 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 49D623CE285A132D00B43867;
-			remoteInfo = NizekTakeHome;
-		};
-		49D623F0285A133100B43867 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 49D623C7285A132D00B43867 /* Project object */;
 			proxyType = 1;
@@ -38,17 +27,12 @@
 /* Begin PBXFileReference section */
 		49D623CF285A132D00B43867 /* NizekTakeHome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NizekTakeHome.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49D623D2285A132D00B43867 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		49D623D4285A132D00B43867 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		49D623D6285A132D00B43867 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		49D623D9285A132D00B43867 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		49D623D6285A132D00B43867 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		49D623DB285A133000B43867 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		49D623DE285A133000B43867 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		49D623E0285A133100B43867 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		49D623E5285A133100B43867 /* NizekTakeHomeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NizekTakeHomeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		49D623E9285A133100B43867 /* NizekTakeHomeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NizekTakeHomeTests.swift; sourceTree = "<group>"; };
-		49D623EF285A133100B43867 /* NizekTakeHomeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NizekTakeHomeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		49D623F3285A133100B43867 /* NizekTakeHomeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NizekTakeHomeUITests.swift; sourceTree = "<group>"; };
-		49D623F5285A133100B43867 /* NizekTakeHomeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NizekTakeHomeUITestsLaunchTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,13 +50,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		49D623EC285A133100B43867 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -81,7 +58,6 @@
 			children = (
 				49D623D1285A132D00B43867 /* NizekTakeHome */,
 				49D623E8285A133100B43867 /* NizekTakeHomeTests */,
-				49D623F2285A133100B43867 /* NizekTakeHomeUITests */,
 				49D623D0285A132D00B43867 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -91,7 +67,6 @@
 			children = (
 				49D623CF285A132D00B43867 /* NizekTakeHome.app */,
 				49D623E5285A133100B43867 /* NizekTakeHomeTests.xctest */,
-				49D623EF285A133100B43867 /* NizekTakeHomeUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -99,13 +74,9 @@
 		49D623D1285A132D00B43867 /* NizekTakeHome */ = {
 			isa = PBXGroup;
 			children = (
-				49D623D2285A132D00B43867 /* AppDelegate.swift */,
-				49D623D4285A132D00B43867 /* SceneDelegate.swift */,
-				49D623D6285A132D00B43867 /* ViewController.swift */,
-				49D623D8285A132D00B43867 /* Main.storyboard */,
-				49D623DB285A133000B43867 /* Assets.xcassets */,
-				49D623DD285A133000B43867 /* LaunchScreen.storyboard */,
-				49D623E0285A133100B43867 /* Info.plist */,
+				49D62402285A13B600B43867 /* AppDelegates */,
+				49D62403285A13CC00B43867 /* Views */,
+				49D62406285A140300B43867 /* SupportingFiles */,
 			);
 			path = NizekTakeHome;
 			sourceTree = "<group>";
@@ -118,13 +89,46 @@
 			path = NizekTakeHomeTests;
 			sourceTree = "<group>";
 		};
-		49D623F2285A133100B43867 /* NizekTakeHomeUITests */ = {
+		49D62402285A13B600B43867 /* AppDelegates */ = {
 			isa = PBXGroup;
 			children = (
-				49D623F3285A133100B43867 /* NizekTakeHomeUITests.swift */,
-				49D623F5285A133100B43867 /* NizekTakeHomeUITestsLaunchTests.swift */,
+				49D623D2285A132D00B43867 /* AppDelegate.swift */,
 			);
-			path = NizekTakeHomeUITests;
+			path = AppDelegates;
+			sourceTree = "<group>";
+		};
+		49D62403285A13CC00B43867 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				49D62405285A13DE00B43867 /* Controllers */,
+				49D62404285A13D500B43867 /* Views */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		49D62404285A13D500B43867 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		49D62405285A13DE00B43867 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				49D623D6285A132D00B43867 /* MainViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		49D62406285A140300B43867 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				49D623DB285A133000B43867 /* Assets.xcassets */,
+				49D623DD285A133000B43867 /* LaunchScreen.storyboard */,
+				49D623E0285A133100B43867 /* Info.plist */,
+			);
+			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,24 +169,6 @@
 			productReference = 49D623E5285A133100B43867 /* NizekTakeHomeTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		49D623EE285A133100B43867 /* NizekTakeHomeUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 49D623FF285A133100B43867 /* Build configuration list for PBXNativeTarget "NizekTakeHomeUITests" */;
-			buildPhases = (
-				49D623EB285A133100B43867 /* Sources */,
-				49D623EC285A133100B43867 /* Frameworks */,
-				49D623ED285A133100B43867 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				49D623F1285A133100B43867 /* PBXTargetDependency */,
-			);
-			name = NizekTakeHomeUITests;
-			productName = NizekTakeHomeUITests;
-			productReference = 49D623EF285A133100B43867 /* NizekTakeHomeUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -197,10 +183,6 @@
 						CreatedOnToolsVersion = 13.2;
 					};
 					49D623E4285A133100B43867 = {
-						CreatedOnToolsVersion = 13.2;
-						TestTargetID = 49D623CE285A132D00B43867;
-					};
-					49D623EE285A133100B43867 = {
 						CreatedOnToolsVersion = 13.2;
 						TestTargetID = 49D623CE285A132D00B43867;
 					};
@@ -221,7 +203,6 @@
 			targets = (
 				49D623CE285A132D00B43867 /* NizekTakeHome */,
 				49D623E4285A133100B43867 /* NizekTakeHomeTests */,
-				49D623EE285A133100B43867 /* NizekTakeHomeUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -233,18 +214,10 @@
 			files = (
 				49D623DF285A133000B43867 /* LaunchScreen.storyboard in Resources */,
 				49D623DC285A133000B43867 /* Assets.xcassets in Resources */,
-				49D623DA285A132D00B43867 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		49D623E3285A133100B43867 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		49D623ED285A133100B43867 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -258,9 +231,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				49D623D7285A132D00B43867 /* ViewController.swift in Sources */,
+				49D623D7285A132D00B43867 /* MainViewController.swift in Sources */,
 				49D623D3285A132D00B43867 /* AppDelegate.swift in Sources */,
-				49D623D5285A132D00B43867 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,15 +244,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		49D623EB285A133100B43867 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				49D623F6285A133100B43867 /* NizekTakeHomeUITestsLaunchTests.swift in Sources */,
-				49D623F4285A133100B43867 /* NizekTakeHomeUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -289,22 +252,9 @@
 			target = 49D623CE285A132D00B43867 /* NizekTakeHome */;
 			targetProxy = 49D623E6285A133100B43867 /* PBXContainerItemProxy */;
 		};
-		49D623F1285A133100B43867 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 49D623CE285A132D00B43867 /* NizekTakeHome */;
-			targetProxy = 49D623F0285A133100B43867 /* PBXContainerItemProxy */;
-		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		49D623D8285A132D00B43867 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				49D623D9285A132D00B43867 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		49D623DD285A133000B43867 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -367,7 +317,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -422,7 +372,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -441,10 +391,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = RSW6ZAWD52;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = NizekTakeHome/Info.plist;
+				INFOPLIST_FILE = NizekTakeHome/SupportingFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -469,10 +418,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = RSW6ZAWD52;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = NizekTakeHome/Info.plist;
+				INFOPLIST_FILE = NizekTakeHome/SupportingFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -528,42 +476,6 @@
 			};
 			name = Release;
 		};
-		49D62400285A133100B43867 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = RSW6ZAWD52;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.TheAlienMann.NizekTakeHomeUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = NizekTakeHome;
-			};
-			name = Debug;
-		};
-		49D62401285A133100B43867 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = RSW6ZAWD52;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.TheAlienMann.NizekTakeHomeUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = NizekTakeHome;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -590,15 +502,6 @@
 			buildConfigurations = (
 				49D623FD285A133100B43867 /* Debug */,
 				49D623FE285A133100B43867 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		49D623FF285A133100B43867 /* Build configuration list for PBXNativeTarget "NizekTakeHomeUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				49D62400285A133100B43867 /* Debug */,
-				49D62401285A133100B43867 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

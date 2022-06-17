@@ -1,5 +1,5 @@
 //
-//  UITextField+Exten.swift
+//  CustomTextField.swift
 //  NizekTakeHome
 //
 //  Created by Mohamad Rahmani on 15.06.22.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CustomeTextField: UITextField {
+class CustomTextField: UITextField {
   var placeholderText: String {
     didSet {
       setPlaceholder()
@@ -29,13 +29,18 @@ class CustomeTextField: UITextField {
     self.leftPaddingWidth = leftPaddingWidth
     self.fontSize = fontSize
     super.init(frame: .zero)
+
+    autocorrectionType = .no
+    autocapitalizationType = .none
+    spellCheckingType = .no
+    
     setPlaceholder()
     setLeftPaddingWidth()
     setFontSize()
   }
 
   private func setPlaceholder() {
-    attributedPlaceholder = NSAttributedString(string: placeholderText, attributes: [NSAttributedString.Key.foregroundColor: UIColor.red.withAlphaComponent(0.3)])
+    attributedPlaceholder = NSAttributedString(string: placeholderText, attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray.withAlphaComponent(0.6), NSAttributedString.Key.font: UIFont.systemFont(ofSize: 17.0)])
   }
 
   private func setLeftPaddingWidth() {

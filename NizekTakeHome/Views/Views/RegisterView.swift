@@ -10,33 +10,30 @@ import CustomButton
 
 class RegisterView: UIView {
 
-  lazy var fullNameTextField: CustomeTextField = {
-    let textFiled = CustomeTextField(placeholderText: "Enter your fullname, please.", leftPaddingWidth: 8, fontSize: 22.0)
+  lazy var fullNameTextField: CustomTextField = {
+    let textFiled = CustomTextField(placeholderText: "Enter your fullname, please.", leftPaddingWidth: 18, fontSize: 17.0)
+    textFiled.translatesAutoresizingMaskIntoConstraints = false
+    textFiled.autocapitalizationType = .words
+    return textFiled
+  }()
+
+  lazy var userNameTextField: CustomTextField = {
+    let textFiled = CustomTextField(placeholderText: "Enter a username, please.", leftPaddingWidth: 18, fontSize: 17.0)
     textFiled.translatesAutoresizingMaskIntoConstraints = false
     return textFiled
   }()
 
-  lazy var userNameTextField: CustomeTextField = {
-    let textFiled = CustomeTextField(placeholderText: "Enter a username, please.", leftPaddingWidth: 8, fontSize: 22.0)
-    textFiled.translatesAutoresizingMaskIntoConstraints = false
-    return textFiled
-  }()
-
-  lazy var passwordTextField: CustomeTextField = {
-    let textFiled = CustomeTextField(placeholderText: "Enter a password, please.", leftPaddingWidth: 8, fontSize: 22.0)
+  lazy var passwordTextField: CustomTextField = {
+    let textFiled = CustomTextField(placeholderText: "Enter a password, please.", leftPaddingWidth: 18, fontSize: 17.0)
     textFiled.translatesAutoresizingMaskIntoConstraints = false
     return textFiled
   }()
 
   lazy var registerButton: CustomButton = {
-    let button = CustomButton(title: "Register", subtitle: nil, icon: "ss", titleFontSize: 17, subtitleFontSize: nil, imageOptions: .assetImage, action: handleRegister)
+    let button = CustomButton(title: "Register", subtitle: nil, icon: "ss", titleFontSize: 17, subtitleFontSize: nil, imageOptions: .assetImage)
     button.translatesAutoresizingMaskIntoConstraints = false
     return button
   }()
-
-  private func handleRegister() {
-      print(#line, #file.components(separatedBy: "/").last!, "Got tapped...")
-  }
 
   override init(frame: CGRect) {
     super.init(frame: frame)
@@ -45,6 +42,7 @@ class RegisterView: UIView {
     addSubview(userNameTextField)
     addSubview(passwordTextField)
     addSubview(registerButton)
+
     setupConstraints()
   }
 
@@ -55,13 +53,13 @@ class RegisterView: UIView {
       fullNameTextField.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 8),
       fullNameTextField.heightAnchor.constraint(equalToConstant: 44.0),
 
-      userNameTextField.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor, constant: 8),
-      userNameTextField.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor, constant: -8),
+      userNameTextField.leadingAnchor.constraint(equalTo: fullNameTextField.leadingAnchor),
+      userNameTextField.trailingAnchor.constraint(equalTo: fullNameTextField.trailingAnchor),
       userNameTextField.topAnchor.constraint(equalTo: fullNameTextField.bottomAnchor, constant: 18),
       userNameTextField.heightAnchor.constraint(equalToConstant: 44.0),
 
-      passwordTextField.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor, constant: 8),
-      passwordTextField.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor, constant: -8),
+      passwordTextField.leadingAnchor.constraint(equalTo: fullNameTextField.leadingAnchor),
+      passwordTextField.trailingAnchor.constraint(equalTo: fullNameTextField.trailingAnchor),
       passwordTextField.topAnchor.constraint(equalTo: userNameTextField.bottomAnchor, constant: 18),
       passwordTextField.heightAnchor.constraint(equalToConstant: 44.0),
 

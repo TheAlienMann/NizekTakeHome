@@ -9,9 +9,15 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
+  lazy var loginView: LoginView = {
+    let view = LoginView()
+    return view
+  }()
+
   override func viewDidLoad() {
     super.viewDidLoad()
 
-    view.backgroundColor = .systemRed
+    view = loginView
+    view.backgroundColor = .white
   }
 }

@@ -9,9 +9,15 @@ import UIKit
 
 class WelcomeViewController: UIViewController {
 
+  lazy var welcomeView: WelcomeView = {
+    let view = WelcomeView()
+    return view
+  }()
+
   override func viewDidLoad() {
     super.viewDidLoad()
 
-    view.backgroundColor = .green
+    view = welcomeView
+    view.backgroundColor = .white
   }
 }

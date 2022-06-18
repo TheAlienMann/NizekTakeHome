@@ -11,9 +11,16 @@ class LoginViewController: UIViewController {
 
   private var userViewMode: UserViewModel!
 
+  private var isDisabled: Bool = false {
+    didSet {
+      isDisabled = loginView.userNameTextField.text!.count >= 2 && loginView.passwordTextField.text!.count >= 2
+    }
+  }
+
   lazy var loginView: LoginView = {
     let view = LoginView()
     view.loginButton.action = goToWelcomeScreen
+    view.loginButton.isEnabled = true
     view.userNameTextField.delegate = self
     view.passwordTextField.delegate = self
     return view
@@ -32,13 +39,23 @@ class LoginViewController: UIViewController {
 
     setupRemoveFocusFromTextField()
     loginView.loginButton.bindToKeyboard()
+
+  }
+
+  override func viewWillDisappear(_ animated: Bool) {
+    super.viewWillDisappear(animated)
+    userViewMode.userInfo = [:]
   }
 
   private func goToWelcomeScreen() {
-    loginView.userNameTextField.resignFirstResponder()
-    loginView.passwordTextField.resignFirstResponder()
-    let welcomeViewController = WelcomeViewController(userViewModel: userViewMode)
-    present(welcomeViewController, animated: true, completion: nil)
+    if Authenticator.userName! == loginView.userNameTextField.text! && Authenticator.password! == loginView.passwordTextField.text! {
+      loginView.userNameTextField.resignFirstResponder()
+      loginView.passwordTextField.resignFirstResponder()
+      let welcomeViewController = WelcomeViewController(userViewModel: userViewMode)
+      present(welcomeViewController, animated: true, completion: nil)
+    } else {
+      print(#line, #file.components(separatedBy: "/").last!, "try again...")
+    }
   }
 }
 

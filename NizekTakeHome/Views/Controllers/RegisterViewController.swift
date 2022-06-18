@@ -41,13 +41,14 @@ class RegisterViewController: UIViewController {
   }
 
   func didTapRegisterButton() {
-//    print(#line, #file.components(separatedBy: "/").last!, userViewModel.userInfo)
+    print(#line, #file.components(separatedBy: "/").last!, userViewModel.userInfo)
+    Authenticator.userName = userViewModel.userInfo["userName"]
+    Authenticator.password = userViewModel.userInfo["password"]
     registerView.fullNameTextField.resignFirstResponder()
     registerView.userNameTextField.resignFirstResponder()
     registerView.passwordTextField.resignFirstResponder()
     let loginViewController = LoginViewController(userViewModel: userViewModel)
     navigationController?.pushViewController(loginViewController, animated: true)
-//    userViewModel.userInfo = [:]
   }
 
   @objc private func fullNameDidChange() {

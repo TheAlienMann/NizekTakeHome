@@ -7,6 +7,10 @@
 
 import Foundation
 
+protocol UserInterface {
+  var user: UserModel { get set }
+}
+
 class UserViewModel: NSObject {
 
   @objc dynamic var user: UserModel = UserModel()

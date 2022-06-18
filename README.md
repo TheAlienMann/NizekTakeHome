@@ -1,4 +1,4 @@
-### Requirements can be found [here](./iOS Code Challenge.pdf)
+### Requirements can be found [here](https://github.com/TheAlienMann/NizekTakeHome/blob/main/iOS%20Code%20Challenge.pdf)
 
 #### What you will find here though:
 1. An MVVM Architecture.

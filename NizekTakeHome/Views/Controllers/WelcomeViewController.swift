@@ -27,7 +27,7 @@ class WelcomeViewController: UIViewController {
 
     view = welcomeView
     view.backgroundColor = .white
-    welcomeView.greetingMessageLabel.text = "Welcome, \(userViewModel.userInfo.first!)!"
+    welcomeView.greetingMessageLabel.text = "Welcome, \(userViewModel.userInfo["fullName"]!)!"
   }
 
   private func dismissWelcomeScreen() {

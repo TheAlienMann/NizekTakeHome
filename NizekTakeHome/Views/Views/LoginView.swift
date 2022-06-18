@@ -38,10 +38,6 @@ class LoginView: UIView {
     setupConstraints()
   }
 
-  private func handleLogin() {
-    print(#line, #file.components(separatedBy: "/").last!, "Logged in.....")
-  }
-
   private func setupConstraints() {
     NSLayoutConstraint.activate([
       userNameTextField.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor, constant: 12),

@@ -22,8 +22,8 @@ class RegisterView: UIView {
     label.translatesAutoresizingMaskIntoConstraints = false
     label.textAlignment = .left
     label.textColor = UIColor.black
-    label.font = .systemFont(ofSize: 14.0)
-    label.text = "Name at least should be 4 characters."
+    label.font = .systemFont(ofSize: 12.0)
+    label.text = "Name should be at least 4 characters."
     return label
   }()
 
@@ -38,8 +38,8 @@ class RegisterView: UIView {
     label.translatesAutoresizingMaskIntoConstraints = false
     label.textAlignment = .left
     label.textColor = UIColor.black
-    label.font = .systemFont(ofSize: 14.0)
-    label.text = "Username at least should be 2 characters."
+    label.font = .systemFont(ofSize: 12.0)
+    label.text = "Username should be at least 2 characters."
     return label
   }()
 
@@ -54,8 +54,8 @@ class RegisterView: UIView {
     label.translatesAutoresizingMaskIntoConstraints = false
     label.textAlignment = .left
     label.textColor = UIColor.black
-    label.font = .systemFont(ofSize: 14.0)
-    label.text = "Password at least should be 2 characters."
+    label.font = .systemFont(ofSize: 12.0)
+    label.text = "Password should be at least 2 characters."
     return label
   }()
 

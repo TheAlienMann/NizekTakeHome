@@ -13,7 +13,6 @@ class WelcomeView: UIView {
   lazy var greetingMessageLabel: UILabel = {
     let label = UILabel()
     label.translatesAutoresizingMaskIntoConstraints = false
-    label.text = "Welcome ...."
     label.font = UIFont.systemFont(ofSize: 28)
     label.textAlignment = .center
     label.textColor = .systemRed

@@ -9,8 +9,16 @@ import UIKit
 
 class WelcomeViewController: UIViewController {
 
+  private var userViewModel: UserViewModel!
+
+  convenience init(userViewModel: UserViewModel) {
+    self.init()
+    self.userViewModel = userViewModel
+  }
+
   lazy var welcomeView: WelcomeView = {
     let view = WelcomeView()
+    view.logoutButton.action = dismissWelcomeScreen
     return view
   }()
 
@@ -19,5 +27,10 @@ class WelcomeViewController: UIViewController {
 
     view = welcomeView
     view.backgroundColor = .white
+    welcomeView.greetingMessageLabel.text = "Welcome, \(userViewModel.userInfo.first!)!"
+  }
+
+  private func dismissWelcomeScreen() {
+    dismiss(animated: true)
   }
 }

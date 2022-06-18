@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		496DC933285D072200A29246 /* KeyboardHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496DC932285D072200A29246 /* KeyboardHandler.swift */; };
+		496DC939285D22AA00A29246 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496DC938285D22AA00A29246 /* LoginViewModel.swift */; };
 		49D623D3285A132D00B43867 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D623D2285A132D00B43867 /* AppDelegate.swift */; };
 		49D623D7285A132D00B43867 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D623D6285A132D00B43867 /* RegisterViewController.swift */; };
 		49D623DC285A133000B43867 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49D623DB285A133000B43867 /* Assets.xcassets */; };
@@ -36,6 +37,7 @@
 
 /* Begin PBXFileReference section */
 		496DC932285D072200A29246 /* KeyboardHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardHandler.swift; sourceTree = "<group>"; };
+		496DC938285D22AA00A29246 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		49D623CF285A132D00B43867 /* NizekTakeHome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NizekTakeHome.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49D623D2285A132D00B43867 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		49D623D6285A132D00B43867 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -180,6 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				49D6245B285B36DE00B43867 /* UserViewModel.swift */,
+				496DC938285D22AA00A29246 /* LoginViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -294,6 +297,7 @@
 				49D623D7285A132D00B43867 /* RegisterViewController.swift in Sources */,
 				496DC933285D072200A29246 /* KeyboardHandler.swift in Sources */,
 				49D62408285A15B700B43867 /* RegisterView.swift in Sources */,
+				496DC939285D22AA00A29246 /* LoginViewModel.swift in Sources */,
 				49D6245C285B36DE00B43867 /* UserViewModel.swift in Sources */,
 				49D6240A285A192B00B43867 /* LoginView.swift in Sources */,
 				49D6240E285A196F00B43867 /* WelcomeViewController.swift in Sources */,

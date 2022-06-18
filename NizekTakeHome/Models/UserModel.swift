@@ -11,4 +11,5 @@ class UserModel: NSObject {
   @objc dynamic var fullName: String = ""
   @objc dynamic var userName: String = ""
   @objc dynamic var password: String = ""
+//  @objc dynamic var isEnabled: Bool = false
 }

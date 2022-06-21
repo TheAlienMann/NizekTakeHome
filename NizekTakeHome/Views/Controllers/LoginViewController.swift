@@ -9,28 +9,26 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
-  private var userViewMode: UserViewModel!
-
-  private var isDisabled: Bool = false {
-    didSet {
-      isDisabled = loginView.userNameTextField.text!.count >= 2 && loginView.passwordTextField.text!.count >= 2
-    }
-  }
+  let userViewMode: UserViewModel
 
   lazy var loginView: LoginView = {
     let view = LoginView()
-    view.loginButton.action = goToWelcomeScreen
+    view.loginButton.action = { [weak self] in self?.goToWelcomeScreen() }
     view.loginButton.isEnabled = true
     view.userNameTextField.delegate = self
     view.passwordTextField.delegate = self
     return view
   }()
 
-  convenience init(userViewModel: UserViewModel) {
-    self.init()
+  init(userViewModel: UserViewModel) {
     self.userViewMode = userViewModel
+    super.init(nibName: nil, bundle: nil)
   }
-  
+
+  required init?(coder: NSCoder) {
+    fatalError("init(coder:) has not been implemented")
+  }
+
   override func viewDidLoad() {
     super.viewDidLoad()
 
@@ -56,6 +54,10 @@ class LoginViewController: UIViewController {
     } else {
       print(#line, #file.components(separatedBy: "/").last!, "try again...")
     }
+  }
+
+  deinit {
+    print(#line, #file.components(separatedBy: "/").last!, "LoginViewController released.")
   }
 }
 

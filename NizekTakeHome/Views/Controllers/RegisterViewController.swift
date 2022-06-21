@@ -9,11 +9,11 @@ import UIKit
 
 class RegisterViewController: UIViewController {
 
-  private var userViewModel: UserViewModel!
+  let userViewModel: UserViewModel
 
   lazy var registerView: RegisterView = {
     let view = RegisterView()
-    view.registerButton.action = didTapRegisterButton
+    view.registerButton.action = { [weak self] in self?.didTapRegisterButton() }
     view.registerButton.isEnabled = userViewModel.isRegisterButtonEnabled
     view.fullNameTextField.addTarget(self, action: #selector(fullNameDidChange), for: .editingChanged)
     view.userNameTextField.addTarget(self, action: #selector(usernameDidChange), for: .editingChanged)
@@ -24,10 +24,13 @@ class RegisterViewController: UIViewController {
     return view
   }()
 
-
-  convenience init(userViewModel: UserViewModel) {
-    self.init()
+  init(userViewModel: UserViewModel) {
     self.userViewModel = userViewModel
+    super.init(nibName: nil, bundle: nil)
+  }
+
+  required init?(coder: NSCoder) {
+    fatalError("init(coder:) has not been implemented")
   }
 
   override func viewDidLoad() {

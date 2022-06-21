@@ -13,7 +13,7 @@ protocol UserInterface {
 
 class UserViewModel: NSObject {
 
-  @objc dynamic var user: UserModel = UserModel()
+  @objc dynamic var user: UserModel
   @objc dynamic var userInfo: [String: String] = [:]
 
   @objc dynamic var isRegisterButtonEnabled: Bool = false

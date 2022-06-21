@@ -9,21 +9,24 @@ import UIKit
 
 class WelcomeViewController: UIViewController {
 
-  private var userViewModel: UserViewModel!
+  let userViewModel: UserViewModel
   lazy var welcomeView: WelcomeView = {
     let view = WelcomeView()
-    view.logoutButton.action = dismissWelcomeScreen
+    view.logoutButton.action = { [weak self] in self?.dismissWelcomeScreen() }
     return view
   }()
 
   var timer = Timer()
 
-  convenience init(userViewModel: UserViewModel) {
-    self.init()
+  init(userViewModel: UserViewModel) {
     self.userViewModel = userViewModel
+    super.init(nibName: nil, bundle: nil)
   }
-
-
+  
+  required init?(coder: NSCoder) {
+    fatalError("init(coder:) has not been implemented")
+  }
+  
   override func viewDidLoad() {
     super.viewDidLoad()
 
@@ -38,10 +41,10 @@ class WelcomeViewController: UIViewController {
 
   private func dismissWelcomeScreen() {
     dismiss(animated: true)
-    timer.invalidate()
   }
 
   deinit {
     timer.invalidate()
+    print(#line, #file.components(separatedBy: "/").last!, "WelcomeViewController released.")
   }
 }

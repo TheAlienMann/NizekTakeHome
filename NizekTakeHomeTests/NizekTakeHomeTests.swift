@@ -8,4 +8,20 @@
 import XCTest
 @testable import NizekTakeHome
 
-class NizekTakeHomeTests: XCTestCase { }
+class NizekTakeHomeTests: XCTestCase {
+
+  func testExample() {
+    let sut = WelcomeViewController(userViewModel: UserViewModel(user: UserModel()))
+//    sut.welcomeView.logoutButton.action = sut.dismissWelcomeScreen
+    sut.welcomeView.logoutButton.action = { [weak sut] in sut?.dismissWelcomeScreen() }
+    trackForMemoryLeak(sut)
+  }
+}
+
+extension XCTestCase {
+  func trackForMemoryLeak(_ instance: AnyObject, file: StaticString = #file, line: UInt = #line) {
+    addTeardownBlock { [weak instance] in
+      XCTAssertNil(instance, "Instance should have been deallocated. Potential memory leak.", file: file, line: line)
+    }
+  }
+}

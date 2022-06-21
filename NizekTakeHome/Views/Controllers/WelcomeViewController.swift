@@ -39,7 +39,7 @@ class WelcomeViewController: UIViewController {
     })
   }
 
-  private func dismissWelcomeScreen() {
+  func dismissWelcomeScreen() {
     dismiss(animated: true)
   }
 

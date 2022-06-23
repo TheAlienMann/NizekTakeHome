@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 class UserModel: NSObject {
   @objc dynamic var fullName: String
@@ -14,7 +15,8 @@ class UserModel: NSObject {
 
   init(fullName: String = "",
        userName: String = "",
-       password: String = "") {
+       password: String = ""
+       ) {
     self.fullName = fullName
     self.userName = userName
     self.password = password

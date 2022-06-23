@@ -16,8 +16,4 @@ class Authenticator {
     get { UserDefaults.standard.string(forKey: "password") }
     set { UserDefaults.standard.set(newValue, forKey: "password") }
   }
-
-  // authentications
-  // 1. log user out when app is in background for 30s.
-  //
 }

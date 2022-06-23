@@ -34,9 +34,17 @@ class WelcomeViewController: UIViewController {
     view.backgroundColor = .white
     welcomeView.greetingMessageLabel.text = "Welcome, \(userViewModel.userInfo["fullName"]!)!"
 
-    timer = Timer.scheduledTimer(withTimeInterval: 10, repeats: false, block: { [weak self] _ in
+    if let isAuthenticated = userViewModel.isAuthenticated, isAuthenticated {
+      timer = Timer.scheduledTimer(withTimeInterval: 30, repeats: false, block: { [weak self] _ in
+        self?.userViewModel.isAuthenticated = false
+        self?.dismissWelcomeScreen()
+      })
+    }
+
+    NotificationCenter.default.addObserver(forName: NSNotification.Name("StopTimerInWelcomeViewController"), object: nil, queue: nil) { [weak self] _ in self?.timer.invalidate() }
+    NotificationCenter.default.addObserver(forName: NSNotification.Name.init(rawValue: "dismiss"), object: nil, queue: nil) { [weak self] _ in
       self?.dismissWelcomeScreen()
-    })
+    }
   }
 
   func dismissWelcomeScreen() {
@@ -45,6 +53,7 @@ class WelcomeViewController: UIViewController {
 
   deinit {
     timer.invalidate()
+    NotificationCenter.default.removeObserver(self, name: NSNotification.Name("dismiss"), object: nil)
     print(#line, #file.components(separatedBy: "/").last!, "WelcomeViewController released.")
   }
 }

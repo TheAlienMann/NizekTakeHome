@@ -45,10 +45,11 @@ class LoginViewController: UIViewController {
     userViewMode.userInfo = [:]
   }
 
-  private func goToWelcomeScreen() {
+  private func goToWelcomeScreen() { // there is a bug here!
     if Authenticator.userName! == loginView.userNameTextField.text! && Authenticator.password! == loginView.passwordTextField.text! {
       loginView.userNameTextField.resignFirstResponder()
       loginView.passwordTextField.resignFirstResponder()
+      userViewMode.isAuthenticated = true
       let welcomeViewController = WelcomeViewController(userViewModel: userViewMode)
       present(welcomeViewController, animated: true, completion: nil)
     } else {

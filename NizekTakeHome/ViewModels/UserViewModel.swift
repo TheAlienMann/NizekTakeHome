@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 protocol UserInterface {
   var user: UserModel { get set }
@@ -13,7 +14,10 @@ protocol UserInterface {
 
 class UserViewModel: NSObject {
 
-  @objc dynamic var user: UserModel
+  var isAuthenticated: Bool?
+  private var timer = Timer()
+
+  @objc dynamic let user: UserModel
   @objc dynamic var userInfo: [String: String] = [:]
 
   @objc dynamic var isRegisterButtonEnabled: Bool = false
@@ -26,8 +30,9 @@ class UserViewModel: NSObject {
   private var usernameObserver: NSKeyValueObservation?
   private var passwordObserver: NSKeyValueObservation?
 
-  init(user: UserModel) {
+  init(user: UserModel, isAuthenticated: Bool? = nil) {
     self.user = user
+    self.isAuthenticated = isAuthenticated
     super.init()
 
     fullnameObserver = observe(\.user.fullName, options: [.initial, .new], changeHandler: { [weak self] object, change in
@@ -66,6 +71,7 @@ class UserViewModel: NSObject {
       }
     })
 
+
     userInfoObserver = observe(\.userInfo, options: [.initial, .new], changeHandler: { [weak self] object, change in
       if let newUserInfo = change.newValue, newUserInfo.count == 3 {
         self?.isRegisterButtonEnabled = true
@@ -73,5 +79,20 @@ class UserViewModel: NSObject {
         self?.isRegisterButtonEnabled = false
       }
     })
+  }
+
+  func startTimer() {
+    print(#line, #file.components(separatedBy: "/").last!, "Timer started.")
+      timer = Timer.scheduledTimer(withTimeInterval: 5, repeats: false, block: { [weak self] _ in
+        self?.isAuthenticated = false
+        self?.stopTimer()
+        NotificationCenter.default.post(name: NSNotification.Name("StopTimerInWelcomeViewController"), object: nil)
+        NotificationCenter.default.post(Notification.init(name: Notification.Name.init(rawValue: "dismiss"), object: nil, userInfo: nil))
+        print(#line, #file.components(separatedBy: "/").last!, "Timer stopped.")
+      })
+  }
+
+  func stopTimer() {
+    timer.invalidate()
   }
 }

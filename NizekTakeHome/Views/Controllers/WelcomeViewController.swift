@@ -54,6 +54,7 @@ class WelcomeViewController: UIViewController {
   deinit {
     timer.invalidate()
     NotificationCenter.default.removeObserver(self, name: NSNotification.Name("dismiss"), object: nil)
+    NotificationCenter.default.removeObserver(self, name: NSNotification.Name("StopTimerInWelcomeViewController"), object: nil)
     print(#line, #file.components(separatedBy: "/").last!, "WelcomeViewController released.")
   }
 }

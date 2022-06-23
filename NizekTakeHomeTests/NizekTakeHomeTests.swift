@@ -10,7 +10,7 @@ import XCTest
 
 class NizekTakeHomeTests: XCTestCase {
 
-  func testExample() {
+  func test_dismissWelcomeScreen_deallocatesWelcomeScreenViewController() {
     let sut = WelcomeViewController(userViewModel: UserViewModel(user: UserModel()))
 //    sut.welcomeView.logoutButton.action = sut.dismissWelcomeScreen
     sut.welcomeView.logoutButton.action = { [weak sut] in sut?.dismissWelcomeScreen() }
